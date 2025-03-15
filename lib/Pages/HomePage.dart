@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfoloio_1/Pages/constants.dart';
-
-import 'package:portfoloio_1/Pages/widgets.dart';
+import 'package:portfoloio_1/View/Screens/Widgets/Widgets.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Homepage extends StatefulWidget {
@@ -57,7 +56,7 @@ class _HomepageState extends State<Homepage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    text("Hi iam Sreerag  ", context, 30),
+                    Texttype.text("Hi iam Sreerag  ", context, 30),
                     10.heightBox,
                     AnimatedTextKit(
                       isRepeatingAnimation: true,
@@ -84,7 +83,7 @@ class _HomepageState extends State<Homepage> {
                       },
                     ),
                     20.heightBox,
-                    text(
+                     Texttype.text(
                         "Crafting beautiful, seamless Flutter apps for 2 years turning ideas into smooth experiences.",
                         context,
                         16),

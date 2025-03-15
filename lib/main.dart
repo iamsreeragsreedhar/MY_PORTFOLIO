@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfoloio_1/Pages/HomePage.dart';
-import 'package:portfoloio_1/Portfolio.dart';
+import 'package:portfoloio_1/View/Screens/HomePage.dart';
+import 'package:portfoloio_1/View/Screens/AboutMe.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,7 +9,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+ 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
