@@ -58,3 +58,28 @@ extension SizedBoxExtnsion on num {
   SizedBox get widthBox => SizedBox(width: toDouble());
   SizedBox get heightBox => SizedBox(height: toDouble());
 }
+
+Widget skillCard(String imagePath, String skillName) {
+  return Tooltip(
+    message: skillName,
+    child: Container(
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.4),
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.2),
+            blurRadius: 10,
+            spreadRadius: 2,
+          ),
+        ],
+      ),
+      child: Image.asset(
+        imagePath,
+        width: 80,
+        height: 80,
+      ),
+    ),
+  );
+}

@@ -213,47 +213,44 @@ class Homepage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Align(
-                    alignment: Alignment.topCenter,
-                    child: Texttype.Headingtext("ABOUT ME", context, 40),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  Column(
                     children: [
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: Lottie.asset(
-                          height: 500,
-                          width: 500,
-                          fit: BoxFit.contain,
-                          'About.json',
-                          repeat: true,
-                          reverse: true,
-                          animate: true,
-                        ),
-
-                        //  https://lottie.host/4883af1e-4229-496c-9fed-a7e6a29f163f/E9pc5AU8AJ.lottie
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Lottie.asset(
+                            height: 400,
+                            width: 400,
+                            fit: BoxFit.contain,
+                            'About.json',
+                            repeat: true,
+                            reverse: true,
+                            animate: true,
+                          ),
+                          40.widthBox,
+                          Expanded(
+                            flex: 5,
+                            child: Texttype.Paratext(
+                              "I am a passionate Flutter developer with 2 years of experience crafting beautiful,high-performance mobile applications.I specialize in building smooth, responsive, and visually stunning apps that deliver seamless user experiences.Always eager to explore new technologies,I thrive on solving complex challenges and turning ideas into reality with clean, efficient code.",
+                              context,
+                              16,
+                            ),
+                          ),
+                        ],
                       ),
-                      Container(
-                        height: 200,
-                        width: 600,
-                        child: Texttype.Paratext(
-                          "I am a passionate Flutter developer with 2 years of experience crafting beautiful,high-performance mobile applications.I specialize in building smooth, responsive, and visually stunning apps that deliver seamless user experiences.Always eager to explore new technologies,I thrive on solving complex challenges and turning ideas into reality with clean, efficient code.",
-                          context,
-                          16,
-                        ),
-                      )
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          skillCard('assets/Dart.png', "Dart"),
+                          skillCard('assets/fltr.png', "Flutter"),
+                          skillCard('assets/nodejs1.png', "Node.js"),
+                        ],
+                      ),
                     ],
                   ),
-                  Positioned(
-                      right: 20,
-                      left: 20,
-                      top: 50,
-                      bottom: 60,
-                      child: Texttype.Headingtext("SKILLS", context, 40)),
                 ])),
 
-            // Projects Section
             Container(
               key: section2Key,
               height: 400,
