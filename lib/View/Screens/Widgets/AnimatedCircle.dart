@@ -16,7 +16,7 @@ class _AnimatedProfilePictureState extends State<AnimatedProfilePicture>
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: Duration(seconds: 2),
+      duration: Duration(seconds: 5),
       vsync: this,
     )..repeat(reverse: true);
 
@@ -42,8 +42,8 @@ class _AnimatedProfilePictureState extends State<AnimatedProfilePicture>
           child: ClipOval(
             child: Image.asset(
               'assets/pht.png',
-              height: 200,
-              width: 200,
+              height: 300,
+              width: 300,
               fit: BoxFit.cover,
             ),
           ),

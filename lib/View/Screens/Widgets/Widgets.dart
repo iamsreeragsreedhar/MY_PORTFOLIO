@@ -63,10 +63,11 @@ Widget skillCard(String imagePath, String skillName) {
   return Tooltip(
     message: skillName,
     child: Container(
+      height: 80,
       padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.4),
-        borderRadius: BorderRadius.circular(12),
+        color: Colors.white.withOpacity(0.3),
+        borderRadius: BorderRadius.circular(11),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.2),
@@ -77,8 +78,8 @@ Widget skillCard(String imagePath, String skillName) {
       ),
       child: Image.asset(
         imagePath,
-        width: 80,
-        height: 80,
+        width: 70,
+        height: 70,
       ),
     ),
   );
